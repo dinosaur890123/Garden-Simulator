@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Simulator</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Garden Simulator</h1>
+    </header>
+    <main>
+        <div class="panel">
+            <div class="stats-row">
+                <span class="stat-label">Money</span>
+                <span id="money-display" class="stat-value money-value">$10</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Day</span>
+                <span id="day-display" class="stat-value day-value">1</span>
+            </div>
+        </div>
+        <div class="panel">
+            <h3 class="tools-title">Tools</h3>
+            <div class="tool-bar">
+                <button onclick="selectTool('seed')" id="button-seed" class="tool-button">
+                    <span class="tool-icon">🌱</span>
+                    <span class="tool-name">Plant</span>
+                    <span class="tool-cost cost-green">-$2</span>
+                </button>
+                <button onclick="selectTool('water')" id="btn-water" class="tool-button">
+                    <span class="tool-icon">💧</span>
+                    <span class="tool-name">Water</span>
+                    <span class="tool-cost cost-blue">Free</span>
+                </button>
+                <button onclick="selectTool('harvest')" id="button-harvest" class="tool-button">
+                    <span class="tool-icon">✂️</span>
+                    <span class="tool-name">Harvest</span>
+                    <span class="tool-cost cost-gold">+$5</span>
+                </button>
+                <button onclick="selectTool('shovel')" id="button-shovel" class="tool-button">
+                    <span class="tool-icon">⛏️</span>
+                    <span class="tool-name">Dig</span>
+                    <span class="tool-cost cost-red">-$1</span>
+                </button>
+            </div>
+            <div id="status-message">Select a tool to start gardening...</div>
+        </div>
+        <div class="garden-wrapper">
+            <div id="garden-grid" class="garden-grid"></div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
